@@ -8,3 +8,7 @@ lint:
 	npx eslint .
 lintFix: 
 	npx eslint --fix .
+brain-even:
+	node bin/brain-even.js
+pretti:
+	npx prettier . --write
