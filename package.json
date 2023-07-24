@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/RomaDhzan/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/RomaDhzan/frontend-project-44#readme"
+  "homepage": "https://github.com/RomaDhzan/frontend-project-44#readme",
+  "dependencies": {
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0",
+    "readline-sync": "^1.4.10"
+  }
 }
