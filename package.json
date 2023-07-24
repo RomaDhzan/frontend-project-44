@@ -1,5 +1,5 @@
 {
-  "name": "@hexlet/code",
+  "name": "q",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/RomaDhzan/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/RomaDhzan/frontend-project-44/actions)",
   "main": "index.js",
@@ -21,8 +21,12 @@
   },
   "homepage": "https://github.com/RomaDhzan/frontend-project-44#readme",
   "dependencies": {
-    "eslint": "^8.45.0",
     "prettier": "^3.0.0",
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
   }
 }
