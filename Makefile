@@ -12,3 +12,7 @@ brain-even:
 	node bin/brain-even.js
 pretti:
 	npx prettier . --write
+brain-calc:
+	node bin/brain-calc.js
+brain-gcd:
+	node bin/brain-gcd.js
