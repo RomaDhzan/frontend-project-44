@@ -7,7 +7,9 @@ console.log(`Hello, ${name}!`);
 let i = 0;
 
 while (i < 3) {
-  const getRandomNum = (min, max) => {
+  const getRandomNum = (num1, num2) => {
+    let min = num1;
+    let max = num2;
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
@@ -19,11 +21,11 @@ while (i < 3) {
 
   const answer = readlineSync.question('Your answer: ');
 
-  const isPrime = (num) => {
-    for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
-      if (num % i === 0) return false;
+  const isPrime = (item) => {
+    for (let j = 2, s = Math.sqrt(item); j <= s; j += 1) {
+      if (item % j === 0) return false;
     }
-    return num > 1;
+    return item > 1;
   };
   const primeOrNot = isPrime(num);
   if (primeOrNot === true && answer === 'yes') {

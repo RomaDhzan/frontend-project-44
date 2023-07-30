@@ -4,7 +4,9 @@ import readlineSync from 'readline-sync';
 console.log('Welcome to the Brain Games!');
 const name = readlineSync.question('May I have your name?: ');
 console.log(`Hello, ${name}!`);
-const getRandomNum = (min, max) => {
+const getRandomNum = (num1, num2) => {
+  let min = num1;
+  let max = num2;
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
@@ -16,13 +18,13 @@ while (i < 3) {
     const arfmProgres = getRandomNum(1, 10);
     const progressionLength = getRandomNum(5, 20);
 
-    const progression = [];
+    const progressionArray = [];
 
-    for (let i = 0; i < progressionLength; i++) {
+    for (let j = 0; j < progressionLength; j += 1) {
       num1 += arfmProgres;
       progression.push(num1);
     }
-    return progression;
+    return progressionArray;
   };
 
   const arfmProgression = progression();

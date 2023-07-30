@@ -7,7 +7,9 @@ console.log(`Hello, ${name}!`);
 
 let i = 0;
 while (i < 3) {
-  const getRandomNum = (min, max) => {
+  const getRandomNum = (num1, num2) => {
+    let min = num1;
+    let max = num2;
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
@@ -15,7 +17,6 @@ while (i < 3) {
 
   const num1 = getRandomNum(0, 100);
   const num2 = getRandomNum(0, 100);
-  const result = 0;
   console.log(
     `Find the greatest common divisor of given numbers.\nQuestion: ${num1} ${num2}`,
   );

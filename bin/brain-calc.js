@@ -7,7 +7,9 @@ console.log(`Hello, ${name}!`);
 let i = 0;
 while (i < 3) {
   let tag = '';
-  const getRandomNum = (min, max) => {
+  const getRandomNum = (num1, num2) => {
+    let min = num1;
+    let max = num2;
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
@@ -29,17 +31,17 @@ while (i < 3) {
       case '-':
         result = num1 - num2;
         break;
-      case '*':
+      default:
         result = num1 * num2;
         break;
     }
     const answer = readlineSync.question('Your answer: ');
     switch (Number(result)) {
-      case Number(answer):
+      case Number(answer): {
         const correct = 'Correct!';
         tag = true;
         return console.log(correct);
-
+      }
       default:
         tag = false;
         return console.log(

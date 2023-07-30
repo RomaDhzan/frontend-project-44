@@ -7,7 +7,9 @@ console.log(`Hello, ${name}!`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 let i = 0;
 while (i < 3) {
-  const getRandomNum = (min, max) => {
+  const getRandomNum = (num1, num2) => {
+    let min = num1;
+    let max = num2;
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
