@@ -37,7 +37,7 @@ while (i < 3) {
     console.log('Correct!');
     i += 1;
   } else {
-    console.log(`${answer} is wrong answer ;(. Correct answer was ${trueAnswer}\nLet's try again, ${name}`);
+    console.log(`${answer} is wrong answer ;(. Correct answer was ${trueAnswer}\nLet's try again, ${name}!`);
     break;
   }
 }
