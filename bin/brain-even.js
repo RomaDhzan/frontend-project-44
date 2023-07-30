@@ -25,13 +25,13 @@ while (i < 3) {
   if (yesOrNo !== answerFalseOrTrue) {
     if (answer === 'yes') {
       console.log(
-        `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again ${name}!`,
+        `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${name}!`,
       );
       break;
     }
     if (answer === 'no') {
       console.log(
-        `'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again ${name}!`,
+        `'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${name}!`,
       );
       break;
     }
