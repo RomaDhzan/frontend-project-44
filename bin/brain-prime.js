@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 
 console.log('Welcome to the Brain Games!');
 const name = readlineSync.question('May I have your name?: ');
-console.log(`Hello ${name}!`);
+console.log(`Hello, ${name}!`);
 let i = 0;
 while (i < 3) {
   const getRandomNum = (min, max) => {
