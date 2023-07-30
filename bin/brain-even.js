@@ -12,35 +12,33 @@ while (i < 3) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
   };
-  const result = () => {
-    const question = getRandomNum(0, 100);
-    console.log('Question:', question);
-    const yesOrNo = question % 2 === 0;
-    const answer = readlineSync.question('Your answer: ');
-    const answerFalseOrTrue = answer === 'yes';
 
-    if (yesOrNo === answerFalseOrTrue) {
-      return console.log('Correct!');
+  const question = getRandomNum(0, 100);
+  console.log('Question:', question);
+  const yesOrNo = question % 2 === 0;
+  const answer = readlineSync.question('Your answer: ');
+  const answerFalseOrTrue = answer === 'yes';
+
+  if (yesOrNo === answerFalseOrTrue) {
+    console.log('Correct!');
+  }
+  if (yesOrNo !== answerFalseOrTrue) {
+    if (answer === 'yes') {
+      console.log(
+        `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again ${name}!`,
+      );
+      break;
     }
-    if (yesOrNo !== answerFalseOrTrue) {
-      switch (answer) {
-        case 'yes':
-          console.log(
-            `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again ${name}!`,
-          );
-          result();
-          break;
-        case 'no':
-          console.log(
-            `'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again ${name}!`,
-          );
-          result();
-          break;
-      }
+    if (answer === 'no') {
+      console.log(
+        `'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again ${name}!`,
+      );
+      break;
     }
-  };
-  result();
+  }
   i += 1;
 }
-console.log(`Congratulations, ${name}!`);
 
+if (i === 3) {
+  console.log(`Congratulations, ${name}!`);
+}
