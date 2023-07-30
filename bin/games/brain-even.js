@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import greeting, { getRandomNum } from '../src/cli.js';
+import greeting, { getRandomNum } from '../../src/cli.js';
 
 const name = greeting();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
