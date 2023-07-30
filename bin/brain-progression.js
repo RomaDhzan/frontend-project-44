@@ -22,7 +22,7 @@ while (i < 3) {
 
     for (let j = 0; j < progressionLength; j += 1) {
       num1 += arfmProgres;
-      progression.push(num1);
+      progressionArray.push(num1);
     }
     return progressionArray;
   };
