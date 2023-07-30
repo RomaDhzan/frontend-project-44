@@ -5,6 +5,7 @@ console.log('Welcome to the Brain Games!');
 const name = readlineSync.question('May I have your name?: ');
 console.log(`Hello, ${name}!`);
 let i = 0;
+
 while (i < 3) {
   const getRandomNum = (min, max) => {
     min = Math.ceil(min);
@@ -13,8 +14,9 @@ while (i < 3) {
   };
   const num = getRandomNum(0, 100);
   console.log(
-    `Answer "yes" if given number is prime. Otherwise answer "no".\nQuestion:  ${num}`,
+    `Answer "yes" if given number is prime. Otherwise answer "no".\nQuestion: ${num}`,
   );
+
   const answer = readlineSync.question('Your answer: ');
 
   const isPrime = (num) => {
