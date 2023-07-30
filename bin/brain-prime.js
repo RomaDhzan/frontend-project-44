@@ -33,7 +33,7 @@ while (i < 3) {
     console.log('Correct!');
     i += 1;
   } else {
-    console.log(`${answer} is wrong answer ;(.\nLet's try again, ${name}`);
+    console.log(`${answer} is wrong answer ;(.\nLet's try again, ${name}!`);
     break;
   }
 }
