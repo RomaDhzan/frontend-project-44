@@ -30,8 +30,8 @@ while (i < 3) {
   const primeOrNot = isPrime(num);
   if (primeOrNot === true && answer === 'yes') {
     console.log('Correct!');
-  }
-  if (primeOrNot === false && answer === 'no') {
+    i += 1;
+  } else if (primeOrNot === false && answer === 'no') {
     console.log('Correct!');
     i += 1;
   } else {
