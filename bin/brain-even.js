@@ -42,5 +42,5 @@ while (i < 3) {
   result();
   i += 1;
 }
-console.log(`Congratulations ${name}!`);
+console.log(`Congratulations, ${name}!`);
 
