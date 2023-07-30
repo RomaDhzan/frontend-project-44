@@ -28,7 +28,7 @@ while (i < 3) {
   const arfmProgression = progression();
   const progressionRNDOMItem = getRandomNum(0, arfmProgression.length - 1);
   const trueAnswer = arfmProgression[progressionRNDOMItem];
-  arfmProgression[progressionRNDOMItem] = '...';
+  arfmProgression[progressionRNDOMItem] = '..';
   console.log(`What number is missing in the progression?\nQuestion: ${arfmProgression.toString().replace(/,/g, ' ')}`);
 
   const answer = readlineSync.question('Your answer: ');
