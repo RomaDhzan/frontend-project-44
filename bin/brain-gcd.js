@@ -22,11 +22,11 @@ while (i < 3) {
   );
   const answer = readlineSync.question('Your answer: ');
 
-  function NOD(x, y) {
+  const NOD = (x, y) => {
     if (y > x) return NOD(y, x);
     if (!y) return x;
     return NOD(y, x % y);
-  }
+  };
   const correctAnswer = NOD(num1, num2);
 
   if (correctAnswer === Number(answer)) {
