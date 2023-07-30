@@ -1,16 +1,9 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import greeting, { getRandomNum } from '../src/cli.js';
 
-console.log('Welcome to the Brain Games!');
-const name = readlineSync.question('May I have your name?: ');
-console.log(`Hello, ${name}!`);
-const getRandomNum = (num1, num2) => {
-  let min = num1;
-  let max = num2;
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
-};
+const name = greeting();
+
 let i = 0;
 while (i < 3) {
   const progression = () => {
