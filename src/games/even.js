@@ -5,8 +5,8 @@ const game = () => {
   const description = [];
 
   const question = getRandomNum(0, 100);
-  description.push(`Answer "yes" if the number is even, otherwise answer "no".`);
-  description.push(`Question: ${question}`)
+  description.push('Answer "yes" if the number is even, otherwise answer "no".');
+  description.push(`Question: ${question}`);
   const correctAnswer = question % 2 === 0;
 
   if (correctAnswer === true) {

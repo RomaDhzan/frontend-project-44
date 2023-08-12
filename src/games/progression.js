@@ -9,8 +9,8 @@ const game = () => {
   const correctAnswer = arfmProgression[progressionRNDOMItem];
   arfmProgression[progressionRNDOMItem] = '..';
   const question = arfmProgression;
-  description.push(`What number is missing in the progression?`);
-  description.push(`Question: ${question.toString().replace(/,/g, ' ')}`)
+  description.push('What number is missing in the progression?');
+  description.push(`Question: ${question.toString().replace(/,/g, ' ')}`);
   description.push(correctAnswer.toString());
   return description;
 };

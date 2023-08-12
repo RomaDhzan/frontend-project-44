@@ -8,8 +8,8 @@ const game = () => {
   const operations = ['+', '-', '*'];
   let result = 0;
   const randomOperation = operations[Math.floor(Math.random() * operations.length)];
-  description.push(`What is the result of the expression?`);
-  description.push(`Question: ${num1} ${randomOperation} ${num2}`)
+  description.push('What is the result of the expression?');
+  description.push(`Question: ${num1} ${randomOperation} ${num2}`);
   switch (randomOperation) {
     case '+':
       result = num1 + num2;

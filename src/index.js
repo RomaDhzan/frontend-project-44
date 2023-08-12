@@ -5,7 +5,7 @@ const circle = (func) => {
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
   const dataArrayForExample = func()[0];
-  console.log(dataArrayForExample)
+  console.log(dataArrayForExample);
   let i = 0;
   while (i < 3) {
     const dataArray = func();
@@ -27,8 +27,6 @@ const circle = (func) => {
     }
     if (tOrf === false) {
       return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}\nLet's try again, ${name}!`);
-      
-      
     }
   }
 };
