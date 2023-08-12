@@ -26,7 +26,8 @@ const circle = (func) => {
       break;
     }
     if (tOrf === false) {
-      return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}\nLet's try again, ${name}!`);
+       const fail = (`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}\nLet's try again, ${name}!`);
+       return fail;
     }
   }
 };
