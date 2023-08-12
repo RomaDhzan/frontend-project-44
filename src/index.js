@@ -4,13 +4,14 @@ const circle = (func) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
-
+  const dataArrayForExample = func()[0];
+  console.log(dataArrayForExample)
   let i = 0;
   while (i < 3) {
     const dataArray = func();
-    const example = dataArray[0];
+    const example = dataArray[1];
 
-    const correctAnswer = dataArray[1];
+    const correctAnswer = dataArray[2];
     console.log(example);
 
     const answer = readlineSync.question('Your answer: ');
@@ -25,9 +26,9 @@ const circle = (func) => {
       break;
     }
     if (tOrf === false) {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}\nLet's try again, ${name}!`);
-      console.log('');
-      break;
+      return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}\nLet's try again, ${name}!`);
+      
+      
     }
   }
 };

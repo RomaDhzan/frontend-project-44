@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import circle from '../../src/index.js';
-import gcd from '../../src/gcd.js';
 
-circle(gcd);
+import gcd from '../../src/games/gcd.js';
+
+gcd();
