@@ -1,10 +1,23 @@
-import newProgression from '../newProgression.js';
+
 import getRandomNum from '../randomnum.js';
 import circle from '../index.js';
+const makeProgression = () => {
+  let num1 = getRandomNum(0, 100);
+  const arfmProgres = getRandomNum(1, 10);
+  const progressionLength = getRandomNum(5, 20);
 
-const game = () => {
+  const progressionArray = [];
+
+  for (let j = 0; j < progressionLength; j += 1) {
+    num1 += arfmProgres;
+    progressionArray.push(num1);
+  }
+  return progressionArray;
+};
+
+const DoGame = () => {
   const description = [];
-  const arfmProgression = newProgression();
+  const arfmProgression = makeProgression();
   const progressionRNDOMItem = getRandomNum(0, arfmProgression.length - 1);
   const correctAnswer = arfmProgression[progressionRNDOMItem];
   arfmProgression[progressionRNDOMItem] = '..';
@@ -14,8 +27,8 @@ const game = () => {
   description.push(correctAnswer.toString());
   return description;
 };
-const progression = () => {
-  circle(game);
+const DoProgression = () => {
+  circle(DoGame);
 };
 
-export default progression;
+export default DoProgression;

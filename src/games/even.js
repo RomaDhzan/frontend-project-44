@@ -1,13 +1,16 @@
 import getRandomNum from '../randomnum.js';
 import circle from '../index.js';
-
-const game = () => {
+const isEven = (num) =>{
+  const result = num % 2 === 0;
+  return result;
+}
+const DoGame = () => {
   const description = [];
 
   const question = getRandomNum(0, 100);
   description.push('Answer "yes" if the number is even, otherwise answer "no".');
   description.push(`Question: ${question}`);
-  const correctAnswer = question % 2 === 0;
+  const correctAnswer = isEven(question);
 
   if (correctAnswer === true) {
     description.push('yes');
@@ -18,7 +21,7 @@ const game = () => {
 
   return description;
 };
-const even = () => {
-  circle(game);
+const DoEven = () => {
+  circle(DoGame);
 };
-export default even;
+export default DoEven;

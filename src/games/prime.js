@@ -1,8 +1,15 @@
 import getRandomNum from '../randomnum.js';
-import isPrime from '../isPrime.js';
+
 import circle from '../index.js';
 
-const game = () => {
+const isPrime = (item) => {
+  for (let j = 2, s = Math.sqrt(item); j <= s; j += 1) {
+    if (item % j === 0) return false;
+  }
+  return item > 1;
+};
+
+const DoGame = () => {
   const description = [];
   const question = getRandomNum(0, 100);
   description.push('Answer "yes" if given number is prime. Otherwise answer "no".');
@@ -16,7 +23,7 @@ const game = () => {
   }
   return description;
 };
-const prime = () => {
-  circle(game);
+const DoPrime = () => {
+  circle(DoGame);
 };
-export default prime;
+export default DoPrime;
